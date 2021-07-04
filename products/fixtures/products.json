@@ -1,0 +1,30 @@
+[
+    {
+       "pk":1,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5001340155",
+          "name":"The Balmoral Hotel, Edinburgh",
+          "description":"A picture of Edinburghs most luxiourious hotel from the sky.",
+          "price":20,
+          "category":1,
+          "rating":4.6,
+          "image_url":"/media/edinburgh/DJI_0156.JPG",
+          "image":"DJI_0156.JPG"
+       }
+    },
+    {
+       "pk":2,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5001600425",
+          "name":"The Scott Monument, Edinburgh",
+          "description":"A picture of one of many Edinburghs monuments",
+          "price":20,
+          "category":1,
+          "rating":4.6,
+          "image_url":"/media/edinburgh/DJI_0156.JPG",
+          "image":"DJI_0158.JPG"
+       }
+    }
+]
