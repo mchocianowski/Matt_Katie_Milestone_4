@@ -9,7 +9,7 @@
           "price":20,
           "category":1,
           "rating":4.6,
-          "image_url":"/media/edinburgh/DJI_0156.JPG",
+          "image_url":"/media/",
           "image":"DJI_0156.JPG"
        }
     },
@@ -21,9 +21,9 @@
           "name":"The Scott Monument, Edinburgh",
           "description":"A picture of one of many Edinburghs monuments",
           "price":20,
-          "category":1,
+          "category":2,
           "rating":4.6,
-          "image_url":"/media/edinburgh/DJI_0156.JPG",
+          "image_url":"/media/",
           "image":"DJI_0158.JPG"
        }
     }
