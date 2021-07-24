@@ -1,21 +1,22 @@
 {% extends "base.html" %}
 {% load static %}
 
-
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
+{% block content %}
+<hr>
+<div class="container-fluid">
+    <div class="row">
+        <div class="product-header col text-center mt-3">
+            <h2 class="main-text">Contact Us</h2>
         </div>
     </div>
-{% endblock %}
-
-{% block content %}
-<h1>Contact Us</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
- </form>
-
+    <div class="col-12 col-lg-6">
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" value="submit" class="btn btn-black rounded-4 text-uppercase float-right">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
