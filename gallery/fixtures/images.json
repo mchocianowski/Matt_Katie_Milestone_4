@@ -1,0 +1,26 @@
+[
+    {
+       "ck":1,
+       "model":"gallery.gallery",
+       "fields":{
+          "name":"The Balmoral Hotel, Edinburgh",
+          "description":"A picture of Edinburghs most luxiourious hotel from the sky.",
+          "category_images":1,
+          "rating":4.6,
+          "image_url":"/media/",
+          "image":"DJI_0156.JPG"
+       }
+    },
+    {
+       "ck":2,
+       "model":"gallery.gallery",
+       "fields":{
+          "name":"The Scott Monument, Edinburgh",
+          "description":"A picture of one of many Edinburghs monuments",
+          "category_images":2,
+          "rating":4.6,
+          "image_url":"/media/",
+          "image":"DJI_0158.JPG"
+       }
+    }
+]
