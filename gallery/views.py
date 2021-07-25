@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Gallery, Category_images
-
+from .forms import GalleryForm
 # Create your views here.
 
 
@@ -21,3 +23,72 @@ def gallery(request):
     }
 
     return render(request, 'gallery/images.html', context)
+
+
+@login_required
+def add_image(request):
+    """ Add a image to the gallery """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site admins can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = GalleryForm(request.POST, request.FILES)
+        
+        if form.is_valid():
+            gallery = form.save()
+            messages.success(request, 'Successfully added image!')
+            return redirect(reverse('gallery'))
+        else:
+            messages.error(request, 'Failed to add image. Please ensure the form is valid.')
+    else:
+        form = GalleryForm()
+       
+    template = 'gallery/add_image.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_image(request, gallery_id):
+    """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site admins can do that.')
+        return redirect(reverse('home'))
+
+    gallery = get_object_or_404(Gallery, pk=gallery_id)
+    if request.method == 'POST':
+        form = GalleryForm(request.POST, request.FILES, instance=gallery)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated image and title!')
+            return redirect(reverse('gallery', gallery.id))
+        else:
+            messages.error(request, 'Failed to update image. Please ensure the form is valid.')
+    else:
+        form = GalleryForm(instance=gallery)
+        messages.info(request, f'You are editing {gallery.name}')
+
+    template = 'gallery/edit_image.html'
+    context = {
+        'form': form,
+        'gallery': gallery,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_image(request, gallery_id):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site admins can do that.')
+        return redirect(reverse('home'))
+
+    gallery = get_object_or_404(Gallery, pk=gallery_id)
+    gallery.delete()
+    messages.success(request, 'Image deleted!')
+    return redirect(reverse('gallery'))

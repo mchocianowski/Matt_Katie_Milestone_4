@@ -8,6 +8,7 @@
         </div>
     </div>
 {% endblock %}
+
 {% block content %}
 <hr>
     <div class="container-fluid">
@@ -35,6 +36,12 @@
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ image.name }}</p>
                                 </div>
+                                {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_image' gallery.id %}">Edit</a> |
+                                        <a class="text-danger" href="{% url 'delete_image' gallery.id %}">Delete</a>
+                                    </small>
+                                {% endif %}
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
