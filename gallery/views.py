@@ -34,7 +34,7 @@ def add_image(request):
 
     if request.method == 'POST':
         form = GalleryForm(request.POST, request.FILES)
-        
+            
         if form.is_valid():
             gallery = form.save()
             messages.success(request, 'Successfully added image!')
