@@ -65,7 +65,7 @@ def edit_image(request, gallery_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated image and title!')
-            return redirect(reverse('gallery', gallery.id))
+            return redirect(reverse('gallery'))
         else:
             messages.error(request, 'Failed to update image. Please ensure the form is valid.')
     else:
