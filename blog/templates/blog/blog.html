@@ -1,19 +1,36 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
-<div class="container">
-    <div class="row">
-        {% for post in posts %}
-        <div class="col-md-8 card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <h1> {{ post.title }}</h1>
-                <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-                <p class="card-text ">{{ post.content | safe }}</p>
-            </div>
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
         </div>
-        {% endfor %}
     </div>
-</div>
+{% endblock %}
 
-{% endblock content %}
+{% block content %}
+<hr>
+<div class="container-fluid">
+    <div class="row">
+        <div class="product-header col text-center mt-3">
+            <h2 class="main-text">Welcome to our Blog</h2>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-sm-12 card mb-4 top">
+                <div class="card-body blog-post">
+                    <h3 class="main-text"> {{ post.title }}</h3>
+                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                    <p class="card-text">{{post.content|slice:":200" }}</p>
+                    <a href="{% url 'post_detail' post.id  %}" class="btn btn-black rounded-4">Read More &rarr;</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% endblock content %}
