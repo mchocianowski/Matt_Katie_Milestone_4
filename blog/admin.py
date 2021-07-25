@@ -5,8 +5,7 @@ from .models import Post, Category_blog
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'status','created_on')
-    list_filter = ("status",)
+    list_display = ('title', 'slug', 'created_on')
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
 

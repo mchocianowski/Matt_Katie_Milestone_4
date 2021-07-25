@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -28,6 +28,12 @@
                     <p class="card-text">{{post.content|slice:":200" }}</p>
                     <a href="{% url 'post_detail' post.id  %}" class="btn btn-black rounded-4">Read More &rarr;</a>
                 </div>
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_post' post_id=post.id %}">Edit</a> |
+                    <a class="text-danger" href="{% url 'delete_post' post_id=post.id %}">Delete</a>
+                </small>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
