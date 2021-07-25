@@ -1,1 +1,1 @@
-web: gunicorn Matt-Katie-Milestone-4.wsgi:application
+web: gunicorn matt-katie-milestone-4.wsgi:application
