@@ -5,8 +5,9 @@
                 Portfolio
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="portflio-link">
-                <a href="" class="dropdown-item">Aerial Photography</a>
-                <a href="" class="dropdown-item ">Ground Photography</a>
+                <a href="{% url 'gallery' %}" class="dropdown-item">View All Our Photography</a>
+                <a href="{% url 'gallery' %}?category_images=drone_photography" class="dropdown-item ">View Our Aerial Photography</a>
+                <a href="{% url 'gallery' %}?category_images=ground_photography" class="dropdown-item ">View Our Ground Photography</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -25,19 +26,20 @@
                 Blog
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="blog-link">
-                <a href="{% url 'blog' %}" class="dropdown-item">Photography Tips</a>
-                <a href="" class="dropdown-item">Travel</a>
+                <a href="{% url 'blog' %}" class="dropdown-item">View All Our Blog Posts</a>
+                <a href="{% url 'blog' %}?category_blog=photography_tips" class="dropdown-item ">Photography Tips</a>
+                <a href="{% url 'blog' %}?category_blog=travel_blog" class="dropdown-item ">Travel</a>
             </div>
         </li>
 
         <li class="nav-item">
-            <a class="main-text font-weight-bold nav-link text-black mr-5" href="#" id="about-us-link">
+            <a class="main-text font-weight-bold nav-link text-black mr-5" href="{% url 'contact' %}" id="contact-us-link">
                 Contact Us
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="main-text font-weight-bold nav-link text-black" href="#" id="contact-us-link">
+            <a class="main-text font-weight-bold nav-link text-black" href="{% url 'about_us' %}" id="about-us-link">
                 About Us
             </a>
         </li>
