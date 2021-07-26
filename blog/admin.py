@@ -9,11 +9,13 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
 
+
 class Category_blogAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
+
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Category_blog, Category_blogAdmin)
