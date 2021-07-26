@@ -1,28 +1,35 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="main-text font-weight-bold nav-link text-black mr-5" href="#" id="portfolio-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="main-text font-weight-bold nav-link text-black mr-5" href="#" id="portfolio-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Portfolio
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="portflio-link">
+            <div class="dropdown-menu border-0" aria-labelledby="portfolio-link">
                 <a href="{% url 'gallery' %}" class="dropdown-item">View All Our Photography</a>
-                <a href="{% url 'gallery' %}?category_images=drone_photography" class="dropdown-item ">View Our Aerial Photography</a>
-                <a href="{% url 'gallery' %}?category_images=ground_photography" class="dropdown-item ">View Our Ground Photography</a>
+                <a href="{% url 'gallery' %}?category_images=drone_photography" class="dropdown-item ">View Our Aerial
+                    Photography</a>
+                <a href="{% url 'gallery' %}?category_images=ground_photography" class="dropdown-item ">View Our Ground
+                    Photography</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="main-text font-weight-bold nav-link text-black mr-5" href="#" id="portfolio-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="main-text font-weight-bold nav-link text-black mr-5" href="#" id="products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Shop
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="portflio-link">
+            <div class="dropdown-menu border-0" aria-labelledby="products-link">
                 <a href="{% url 'products' %}" class="dropdown-item">Shop All Our Photography</a>
-                <a href="{% url 'products' %}?category=drone_photography" class="dropdown-item">Shop Aerial Photography</a>
-                <a href="{% url 'products' %}?category=ground_photography" class="dropdown-item ">Shop Ground Photography</a>
+                <a href="{% url 'products' %}?category=drone_photography" class="dropdown-item">Shop Aerial
+                    Photography</a>
+                <a href="{% url 'products' %}?category=ground_photography" class="dropdown-item ">Shop Ground
+                    Photography</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="main-text font-weight-bold nav-link text-black mr-5" href="#" id="blog-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="main-text font-weight-bold nav-link text-black mr-5" href="#" id="blog-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Blog
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="blog-link">
@@ -33,7 +40,8 @@
         </li>
 
         <li class="nav-item">
-            <a class="main-text font-weight-bold nav-link text-black mr-5" href="{% url 'contact' %}" id="contact-us-link">
+            <a class="main-text font-weight-bold nav-link text-black mr-5" href="{% url 'contact' %}"
+                id="contact-us-link">
                 Contact Us
             </a>
         </li>
