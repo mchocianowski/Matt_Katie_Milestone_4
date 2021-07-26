@@ -16,7 +16,9 @@ def gallery(request):
         if 'category_images' in request.GET:
             category_images = request.GET['category_images'].split(',')
             images = images.filter(category_images__name__in=category_images)
-            category_images = Category_images.objects.filter(name__in=category_images)
+            category_images = (
+                Category_images.objects.filter(name__in=category_images)
+            )
     context = {
         'images': images,
         'current_categories': category_images,
@@ -34,16 +36,17 @@ def add_image(request):
 
     if request.method == 'POST':
         form = GalleryForm(request.POST, request.FILES)
-            
+
         if form.is_valid():
             gallery = form.save()
             messages.success(request, 'Successfully added image!')
             return redirect(reverse('gallery'))
         else:
-            messages.error(request, 'Failed to add image. Please ensure the form is valid.')
+            messages.error(request, "Failed to add image." +
+                           "Please ensure the form is valid.")
     else:
         form = GalleryForm()
-       
+
     template = 'gallery/add_image.html'
     context = {
         'form': form,
@@ -67,7 +70,8 @@ def edit_image(request, gallery_id):
             messages.success(request, 'Successfully updated image and title!')
             return redirect(reverse('gallery'))
         else:
-            messages.error(request, 'Failed to update image. Please ensure the form is valid.')
+            messages.error(request, "Failed to update image." +
+                           "Please ensure the form is valid.")
     else:
         form = GalleryForm(instance=gallery)
         messages.info(request, f'You are editing {gallery.name}')

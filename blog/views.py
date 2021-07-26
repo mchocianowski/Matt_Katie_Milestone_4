@@ -14,7 +14,9 @@ def all_posts(request):
         if 'category_blog' in request.GET:
             category_blog = request.GET['category_blog'].split(',')
             posts = posts.filter(category_blog__name__in=category_blog)
-            category_blog = Category_blog.objects.filter(name__in=category_blog)
+            category_blog = (
+                Category_blog.objects.filter(name__in=category_blog)
+            )
 
     context = {
         'posts': posts,
@@ -43,16 +45,17 @@ def add_post(request):
 
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES)
-        
+
         if form.is_valid():
             blog = form.save()
             messages.success(request, 'Successfully added post!')
             return redirect(reverse('blog'))
         else:
-            messages.error(request, 'Failed to add post. Please ensure the form is valid.')
+            messages.error(request, "Failed to add post." +
+                           "Please ensure the form is valid.")
     else:
         form = BlogForm()
-       
+
     template = 'blog/add_post.html'
     context = {
         'form': form,
@@ -76,7 +79,8 @@ def edit_post(request, post_id):
             messages.success(request, 'Successfully updated image and title!')
             return redirect(reverse('blog'))
         else:
-            messages.error(request, 'Failed to update image. Please ensure the form is valid.')
+            messages.error(request, "Failed to update image." +
+                           "Please ensure the form is valid.")
     else:
         form = BlogForm(instance=post)
         messages.info(request, f'You are editing {post.title}')
@@ -101,5 +105,3 @@ def delete_post(request, post_id):
     post.delete()
     messages.success(request, 'Post deleted!')
     return redirect(reverse('blog'))
-
-
