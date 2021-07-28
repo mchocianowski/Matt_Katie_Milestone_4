@@ -34,16 +34,51 @@ body {
 }
 
 
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
 .btn-black {
     background: black;
     color: white;
 }
 
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: black;
+    background: #222;
     color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
 }
 
 .card {
@@ -89,6 +124,10 @@ a.category-badge>span.badge:hover {
 .blog-post {
 
     color: #e0e0e0;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
 }
 
 /* bootstrap toasts */
@@ -159,7 +198,7 @@ a.category-badge>span.badge:hover {
     overflow-y: auto;
 }
 
-/* Media queries */
+/* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -253,6 +292,7 @@ a.category-badge>span.badge:hover {
     border-radius: 0;
 }
 
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -278,7 +318,7 @@ a.category-badge>span.badge:hover {
         height: calc(100vh - 116px);
     }
 
-    .display-4.logo-font.text-black {
+    .display-4.main-text.text-black {
         font-size: 2rem;
     }
 
@@ -299,13 +339,13 @@ a.category-badge>span.badge:hover {
         font-size: .9rem;
     }
 
-    .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0 {
+    .btn.btn-outline-black.rounded-4,
+    .btn.btn-black.rounded-4 {
         padding: .375rem .375rem;
     }
 
-    .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
+    .btn.btn-outline-black.rounded-4.btn-lg,
+    .btn.btn-black.rounded-4.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
     }
@@ -313,16 +353,5 @@ a.category-badge>span.badge:hover {
     .increment-qty,
     .decrement-qty {
         padding: .25rem .5rem !important;
-    }
-
-    .card {
-        border: none;
-        background-color: #e0e0e0;
-    }
-
-    .card-footer {
-        color: black;
-        background-color: #e0e0e0;
-        border: none;
     }
 }
