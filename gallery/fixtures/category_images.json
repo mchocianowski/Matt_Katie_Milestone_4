@@ -1,18 +1,18 @@
 [
-    {
-       "ck":1,
-       "model":"gallery.category_images",
-       "fields":{
-          "name":"drone_photography",
-          "friendly_name":"Drone Photography"
-       }
-    },
-    {
-       "ck":2,
-       "model":"gallery.category_images",
-       "fields":{
-          "name":"ground_photography",
-          "friendly_name":"Ground Photograhy"
-       }
-    }
- ]
+   {
+      "ck":1,
+      "model":"gallery.category_images",
+      "fields":{
+         "name":"drone_photography",
+         "friendly_name":"Drone Photography"
+      }
+   },
+   {
+      "ck":2,
+      "model":"gallery.category_images",
+      "fields":{
+         "name":"ground_photography",
+         "friendly_name":"Ground Photograhy"
+      }
+   }
+]

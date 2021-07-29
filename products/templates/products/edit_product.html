@@ -2,11 +2,6 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +9,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-6">
-            <h2 class="main-text mb-4">Product Management</h2>
+            <h2 class="mb-4">Product Management</h2>
             <h5 class="text-muted">Edit a Product</h5>
             <hr>
         </div>
@@ -33,8 +28,8 @@
                 {% endif %}
                 {% endfor %}
                 <div class="text-right">
-                    <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn btn-black rounded-0" type="submit">Update Product</button>
+                    <a class="btn btn-outline-black rounded-4" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-black rounded-4" type="submit">Update Product</button>
                 </div>
             </form>
         </div>

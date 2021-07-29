@@ -2,11 +2,6 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +9,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="product-header col text-center mt-3">
-            <h2 class="main-text">Welcome to our Blog</h2>
+            <h2>Welcome to our Blog</h2>
         </div>
     </div>
     <br>
@@ -23,7 +18,7 @@
             {% for post in posts %}
             <div class="col-sm-12 card mb-4 top">
                 <div class="card-body blog-post">
-                    <h3 class="main-text"> {{ post.title }}</h3>
+                    <h3> {{ post.title }}</h3>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
                     <p class="card-text">{{post.content|slice:":200" }}</p>
                     <a href="{% url 'post_detail' post.id  %}" class="btn btn-black rounded-4">Read More &rarr;</a>
@@ -40,4 +35,4 @@
     </div>
 </div>
 
-    {% endblock content %}
+{% endblock content %}

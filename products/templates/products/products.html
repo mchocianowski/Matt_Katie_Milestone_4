@@ -14,7 +14,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="product-header col text-center mt-3">
-            <h2 class="main-text">Products</h2>
+            <h2>Products</h2>
         </div>
     </div>
     <div class="row">
@@ -23,7 +23,7 @@
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <div class="sort-select-wrapper w-50">
                         <select id="sort-selector"
-                            class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            class="custom-select custom-select-sm rounded-4 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
                             </option>
                             <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
@@ -59,16 +59,9 @@
                 {% for product in products %}
                 <div class="card col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card">
-                        {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
-                        {% else %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ product.name }}">
-                        </a>
-                        {% endif %}
                         <div class="card-body">
                             <p class="card-text">{{ product.name }}</p>
                         </div>

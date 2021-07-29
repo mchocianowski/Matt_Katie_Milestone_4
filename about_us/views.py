@@ -4,6 +4,6 @@ from django.shortcuts import render
 
 
 def about_us(request):
-    """ A view to return the index page """
+    """ A view to return the about us page. """
 
     return render(request, 'about_us/about_us.html')

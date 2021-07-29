@@ -29,9 +29,9 @@ def gallery(request):
 
 @login_required
 def add_image(request):
-    """ Add a image to the gallery """
+    """ Add an image to the gallery """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only site admins can do that.')
+        messages.error(request, 'Sorry, only site admins can access these settings.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -57,9 +57,9 @@ def add_image(request):
 
 @login_required
 def edit_image(request, gallery_id):
-    """ Edit a product in the store """
+    """ Edit an image in the gallery """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only site admins can do that.')
+        messages.error(request, 'Sorry, only site admins can access these settings.')
         return redirect(reverse('home'))
 
     gallery = get_object_or_404(Gallery, pk=gallery_id)
@@ -67,7 +67,7 @@ def edit_image(request, gallery_id):
         form = GalleryForm(request.POST, request.FILES, instance=gallery)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated image and title!')
+            messages.success(request, 'Successfully updated image, title and details!')
             return redirect(reverse('gallery'))
         else:
             messages.error(request, "Failed to update image." +
@@ -87,9 +87,9 @@ def edit_image(request, gallery_id):
 
 @login_required
 def delete_image(request, gallery_id):
-    """ Delete a product from the store """
+    """ Delete an image from the gallery """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only site admins can do that.')
+        messages.error(request, 'Sorry, only site admins can access these settings.')
         return redirect(reverse('home'))
 
     gallery = get_object_or_404(Gallery, pk=gallery_id)

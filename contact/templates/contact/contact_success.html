@@ -2,11 +2,6 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
 {% endblock %}
 
 {% block content %}
@@ -19,7 +14,13 @@
                 </h2>
             </div>
             <div class="col-5 col-md-6 my-auto">
-                <p class="main-text">Thank you for getting in touch, we aim to respond promptly.</p>
+                <p>Thank you for getting in touch, we aim to respond promptly.</p>
+                <a href="{% url 'home' %}" class="btn btn-black rounded-4 my-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    <span class="text-uppercase">Return to Home</span>
+                </a>
             </div>        
         </div>
     </div>

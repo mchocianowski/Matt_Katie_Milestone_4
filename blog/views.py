@@ -40,7 +40,7 @@ def post_detail(request, post_id):
 def add_post(request):
     """ Add a post to the blog """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only site admins can do that.')
+        messages.error(request, 'Sorry, only site admins can access these settings.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -66,9 +66,9 @@ def add_post(request):
 
 @login_required
 def edit_post(request, post_id):
-    """ Edit a product in the store """
+    """ Edit blog post. """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only site admins can do that.')
+        messages.error(request, 'Sorry, only site admins can access these settings.')
         return redirect(reverse('home'))
 
     post = get_object_or_404(Post, pk=post_id)
@@ -96,9 +96,9 @@ def edit_post(request, post_id):
 
 @login_required
 def delete_post(request, post_id):
-    """ Delete a product from the store """
+    """ Delete a blog post. """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only site admins can do that.')
+        messages.error(request, 'Sorry, only site admins can access these settings.')
         return redirect(reverse('home'))
 
     post = get_object_or_404(Post, pk=post_id)

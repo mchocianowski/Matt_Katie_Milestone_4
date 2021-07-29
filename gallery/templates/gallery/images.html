@@ -2,11 +2,6 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +9,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="main-text">Gallery</h2>
+                <h2>Gallery</h2>
             </div>
         </div>
         <div class="row">
@@ -24,15 +19,9 @@
                     {% for image in images %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                {% if image.image %}
                                 <a href="{{ image.image.url }}" target="_blank">
-                                    <img class="img-fluid" src="{{ image.image.url }}" alt="{{ image.name }}">
+                                    <img class="img-fluid card-image" src="{{ image.image.url }}" alt="{{ image.name }}">
                                 </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ image.name }}">
-                                </a>
-                                {% endif %}
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ image.name }}</p>
                                 </div>
