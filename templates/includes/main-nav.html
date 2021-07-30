@@ -1,7 +1,13 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="main-text font-weight-bold nav-link text-black mr-5" href="#" id="portfolio-link"
+            <a class="font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="portfolio-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Home
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link text-black mr-5" href="{% url 'gallery' %}" id="portfolio-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Portfolio
             </a>
