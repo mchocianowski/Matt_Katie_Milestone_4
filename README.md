@@ -1,59 +1,55 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **_Milestone-Project-4-Matt&Katie.com**
 
-Welcome mchocianowski,
+# **_Introduction:_**
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+The site matt&Katie.com is created for myself and my partner to post our photography and sell prints to our customers. On the site, visitors will also be able to read our blog where we will publish stories from our travels. Registered Users will be able to  comment their thoughts and any suggestions for a photography shoot. Registered users will also be able to update their shipping details i.e address or payment their details.
+![Multi Device Mockup Image](documents/multi_device_mockup.png)
 
-## Gitpod Reminders
+# **_Purpose:_**
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The website above was created for the purpose of achieving the fourth Milestone Project for the Code 
+Institute's Full Stack Developer course.The website was developed using the knowledge gained from all previous models
+throughout the course and the final Django module.
 
-`python3 -m http.server`
+# *User Stories:*
 
-A blue button should appear to click: _Make Public_,
+![Multi Device Mockup Image](documents/user_stories.png)
 
-Another blue button should appear to click: _Open Browser_.
+# *The Surface Plane:*
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### *The font:*
 
-A blue button should appear to click: _Make Public_,
+With the site being focused to showcase photography, the lato font at weight 300 from google fonts has been chosen to allow the viewers to be able to read quickly and efficiently. Using such a sleek and simple font means that there is no attention taken away from the imagery. Along with the colours being used are very simple with just a black and white colour pallet so that the colours on the photographs are what the viewer notices first. The weight 300 provides a sleek look to the site, smaller weights were too thin and hard to read where in contrast greater font weight was too bulky and took away from the websites sleek design.
 
-Another blue button should appear to click: _Open Browser_.
+### *The imagery:*
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The sites imagery only consists of the photographs that have been taken by the photographer. By doing this we don’t allow for any confusion as to what is owned by the siteadmin and therefore the photographers. There has been a decision to avoid background images so that it isn’t taking away from the foreground images again to avoid confusion or negative contrast between colours.
 
-To log into the Heroku toolbelt CLI:
+### *The colour scheme:*
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The colour scheme for this site is monotone, since the main purpose of the site is to show off the photography, avoiding any 
+vibrant colours has allowed the site to showcase it's purpose. Rather than adding lots of colours to the site the presentation has been worked on through adding things such as horizontal rules and card elements to diiferentiate site sections. Again the card elements are set to a pale grey in order to provide slight contrast from the background of the site to grab the users attention and distinguish themselves. This allows for a shadow effect behind the main object which is the imagery.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
+# *Skeleton:*
 
-## Updates Since The Instructional Video
+![Initial Desktop Home Page Wireframe](documents/wireframes/home_page_wireframe.png) 
+![Initial Desktop Portfolio Page Wireframe](documents/wireframes/portfolio_page_wireframe.png) 
+![Initial Desktop Aerial Photography Page Wireframe](documents/wireframes/category_aerial_photography_wireframe.png) 
+![Initial Desktop Ground Photography Page Wireframe](documents/wireframes/category_ground_photography_wireframe.png)
+![Initial Desktop Shop Page Wireframe](documents/wireframes/shop_page_wireframe.png) 
+![Initial Desktop Product View Page Wireframe](documents/wireframes/product_view_page_wireframe.png) 
+![Initial Desktop Blog page Wireframe](documents/wireframes/blog_page_wireframe.png) 
+![Initial Desktop Blog Page User Wireframe](documents/wireframes/blog_page_user_wireframe.png) 
+![Initial Desktop Blog Page Admin Wireframe](documents/wireframes/blog_page_admin_wireframe.png) 
+![Initial Desktop Contact Us Page Wireframe](documents/wireframes/contact_page_wireframe.png) 
+![Initial Desktop About Us Page Wireframe](documents/wireframes/about_us_page_wireframe.png) 
+![Initial Desktop Register Page Wireframe](documents/wireframes/registration_page_wireframe.png) 
+![Initial Desktop Login Page Wireframe](documents/wireframes/login_page_wireframe.png) 
+![Initial Desktop Profile Page Wireframe](documents/wireframes/profile_page_wireframe.png)
+![Initial Desktop Mobile Wireframes 1](documents/wireframes/mobile_wireframe_1.png)
+![Initial Desktop Mobile Wireframes 2](documents/wireframes/mobile_wireframe_2.png)
+![Initial Desktop Mobile Wireframes 3](documents/wireframes/mobile_wireframe_3.png)
+![Initial Desktop Mobile Wireframes 4](documents/wireframes/mobile_wireframe_4.png)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
----
-
-Happy coding!
+### *Database Design:* ###
+![ERD Diaram](documents/erd.png)
