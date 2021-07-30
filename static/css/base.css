@@ -9,6 +9,11 @@ body {
     font-family: 'Lato';
 }
 
+.main-text {
+    color: black;
+    font-family: 'Lato';
+}
+
 .home-image {
     max-width: 100%;
     max-height: 100%;
@@ -315,7 +320,7 @@ input[name='q']::placeholder {
         height: calc(100vh - 116px);
     }
 
-    .display-4.main-text.text-black {
+    .display-4.logo-font.text-black {
         font-size: 2rem;
     }
 
@@ -336,19 +341,18 @@ input[name='q']::placeholder {
         font-size: .9rem;
     }
 
-    .btn.btn-outline-black.rounded-4,
-    .btn.btn-black.rounded-4 {
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
     }
 
-    .btn.btn-outline-black.rounded-4.btn-lg,
-    .btn.btn-black.rounded-4.btn-lg {
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
     }
 
-    .increment-qty,
-    .decrement-qty {
+    .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
 }
