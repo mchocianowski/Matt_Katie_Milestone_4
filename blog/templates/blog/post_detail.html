@@ -1,11 +1,11 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -22,9 +22,10 @@
   </div>
   <a href="{% url 'blog' %}" class="btn btn-black rounded-4 my-2">
     <span class="icon mr-2">
-        <i class="fas fa-blog"></i>
+      <i class="fas fa-blog"></i>
     </span>
     <span class="text-uppercase">Return to Home</span>
+  </a>
 </div>
 
 {% endblock content %}
