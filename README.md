@@ -177,5 +177,71 @@ Reason for lack of these being included at this time is the time factor. Due to 
 * Favicon
     * Favicon.io was used to make the website favicon.
 
+# *Testing:*
 
+![Validation Testing](documents/testing/validation_testing.png)
+![General Testing](documents/testing/tests.png)
+![User Story Testing](documents/testing/user_story_testing.png)
+![Shopper And Blog User Testing](documents/testing/shop_and_blog_user_testing.png)
+![Admin User Testing](documents/testing/admin_user_story_testing.png)
 
+# *Deployment:*
+
+## *Project Creation:*
+I began by creating a new github repository, using as always the code institute template. I named this new repository 
+'Matt_Katie_Milestone_4' and slected 'include all branches'. I then went onto gitpod and installed django using pip3 install django followed by django-admin start project matt_katie in the cli to start his new project. I thn created the env.py fie along with gitignore file which would ignore the env.py file as well as a few others such as sqlite3 to ignore my database. I then ran initial migrations using python3 manage.py migrate, after this I created a new superuser. The next thing to do do was make the inital commit to github. The last step was to download django allauth and once this was downloaded I froze the requirements and began setting up my base template.
+
+## *Deployment:*##
+
+I began the deployment stage by creating a new app in my Heroku account which is called 'matt-katie-milestone-4' and continued to the resources section where I set up Postgres. I then headed back to gitpod where I used the CLI to install dj_database_url and psycopg2-binary and froze these requirments. The next step was to import dj_database_url into settings.py. I then set up the new Database in settings.py. To do this I needed the Database_url from the heroku settings- Config Vars and I linked that to my env.py file. Next I ran migrations and loaded my data from fixtures (for my products and gallery atleast) and created a new superuser. Next I created an if statement in settings.py to control what databse the app was using, if it was being run locally it would use mySQLLite and if it ran on Heroku it'd run off postgres. I then installed gunicorn and froze these requirements. Once the following steps were complete I created a procfile which used the freshly installed gunicorn to serve my app; following this I went to diable collectstatic. This would stop Heroku from collecting my static and media files. Back in settings.py I added my app name o the hostname and also allowed localhosts so that the app would still work in gitpod. The next step was to commit and push these changes so that they can be pushed to heroku. Using git push heroku master I deployed the app to heroku. Since it was now deployed, I wanted to make sure it would automatically stay updated with the latest commits so in the heroku app under deploy I selected connect to github. Once it was all connected I enabled automatic deploys. I then persisted to create an Amazon web services account and linked it to my project this would allow static files to be uploaded to AWS. The final step was to connect the AWS to the Heroku config variables and connect the two systems. This is a summary of my deployment of the Django app but for educational purposes to satisfy all possibilities, below are two methods of deployment commenly used in web development:
+
+### *Deploying Using Github Pages:*
+
+    * Navigate to the GitHub Repository:
+    * Click on the 'Settings' Tab.
+    * Scroll Down to 'Git Hub Pages' Heading.
+    * Select 'Master Branch' as the source.
+    * Click the Save button.
+    * Click on the link to go to the live deployed page.
+
+### *Deploying by running off a local machine:*
+    * Begin by Navigating to the GitHub Repository.
+    * Then click the Code drop down menu.
+    * You can either choose to Download the ZIP file, unpackage locally and open with IDE (This route ends here) 
+    alternatively copy the Git URL from the HTTPS dialogue box.
+    * Open your developement editor of choice and open a terminal window in a directory of your choice.
+    * Use the 'git clone' command in terminal followed by the copied git URL.
+    * Finally a project clone will be created locally on your machine.
+
+# *Citations:* # 
+
+* [Assesment criteria](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/3ec877c0613d427c86bc6bc79c36696e/674e50a4dd3c4068ab10a7b3e5c7b45d/?child=first)
+
+* [Project- Boutique Ado](https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopment)
+
+* [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+
+* [Implementation of error 404 and 500 pages](https://www.youtube.com/watch?v=gsW5gYTNi34)
+
+* [Google Fonts](https://fonts.google.com/specimen/Rubik?query=rubik)
+
+* [Colour Hex](https://www.colorhexa.com/007600)
+
+* [Multi Device Website Mockup Generator](http://techsini.com/multi-mockup/index.php)
+
+* [5 User planes](https://ozchen.com/5-planes-content-strategy/)
+
+* [User story writing](https://www.mountaingoatsoftware.com/agile/user-stories)
+
+* [Website Wireframes](https://balsamiq.com/)
+
+* [Creating a Contact us form](https://learndjango.com/tutorials/django-email-contact-form)
+
+* [Creating a Blog](https://djangocentral.com/building-a-blog-application-with-django/) 
+
+# *Final Comments and mentions:* #
+* Known bugs - In the two browsers I tried Google Chrome and microsoft Edge, images in the galley download when clicked on despite having a target='_blank' in the code. I was unable to fix this in tie for project submission so I'd like to just mention this that I do know it exists but I didn't manage to solve the issue.
+* Also worth mentioning are the images in the card elements, both in gallery and the shop, I have tried to set a max-height for these with css but again this didn't work after numerous and various attempts so I have had to make my piece with it due to the deadline.
+
+* Final Comments-
+I'd Like to really thank everyone at the code institute for their ongoing support. This course has been endless fun however challenging it has been with fulltime employement. Tutor support and my two mentor's (since one went on holday I was reassigned) but both Dick and Aaron were so much help in pushing me through this course. Tutor support does a great job too and the teaching material has been great. 
