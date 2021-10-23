@@ -2,7 +2,8 @@
 
 # **_Introduction:_**
 
-The site matt&Katie.com is created for myself and my partner to post our photography and sell prints to our customers. On the site, visitors will also be able to read our blog where we will publish stories from our travels. Registered Users will be able to  comment their thoughts and any suggestions for a photography shoot. Registered users will also be able to update their shipping details i.e address or payment their details.
+The site matt&Katie.com is created for myself and my partner to post our photography and sell prints to our customers. On the site, visitors will also be able to read our blog where we will publish stories from our travels. Registered Users will be able to  comment their thoughts and any suggestions for a photography shoot. Registered users will also be able to update their shipping details i.e address or payment their details. 
+Click here to view the live site: https://matt-katie-milestone-4.herokuapp.com/
 ![Multi Device Mockup Image](documents/multi_device_mockup.png)
 
 * Heroku App Login Details
